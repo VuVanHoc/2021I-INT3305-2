@@ -41,12 +41,12 @@ def approxEntropy(n, p, N, r):
 
 '''
 '''
-if __name__ == "__main__":
-    _n = 7
-    _p = 0.7
-    _N = 5
-    _r = 3
-    print(prob(_n, _p, _N, _r))
-    print(infoMeasure(_n, _p, _N, _r))
-    print(sumProb(_n, _p, _N, _r))
-    print(approxEntropy(_n, _p, _N, _r))
+# if __name__ == "__main__":
+#     _n = 7
+#     _p = 0.7
+#     _N = 5
+#     _r = 3
+#     print(prob(_n, _p, _N, _r))
+#     print(infoMeasure(_n, _p, _N, _r))
+#     print(sumProb(_n, _p, _N, _r))
+#     print(approxEntropy(_n, _p, _N, _r))
