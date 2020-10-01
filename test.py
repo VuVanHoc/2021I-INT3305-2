@@ -13,4 +13,4 @@ for symbol in codebook:
     codeTree.insert(codebook[symbol], symbol)
 
 message = codeTree.decode(b'\xd2\x9f\x20', 21)
-# print(message)
+print(message)
