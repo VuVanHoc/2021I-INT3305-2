@@ -1,6 +1,3 @@
-import sys
-
-
 class Node:
     def __init__(self, val, left, right):
         self.val = val
@@ -23,7 +20,6 @@ class PrefixCodeTree:
 
     # add new node to tree
     def insert(self, codeword, symbol):
-        newNode = Node(symbol, None, None)
         parent = self.root
         for code in codeword:
             if code == 0:
