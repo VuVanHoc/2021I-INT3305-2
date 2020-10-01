@@ -1,9 +1,12 @@
 import math
+import matplotlib.pyplot as plt
 
 
 def prob(n, p):
     # pr: float = 1 / (math.pow(2, n))
-    pr: float = 1 / (2. ** n)
+    # pr: float = 1 / (2. ** n)
+    pr: float = 1 * ((1 - p) ** (n - 1)) * p
+
     return pr
 
 
@@ -34,14 +37,18 @@ def approxEntropy(n, p):
     return sum
 
 
-'''
-với giá trị p = 1/2, N = 5 => H = 1.78125
-với giá trị p = 1/2, N = 10 => H = 1.98828125
-với giá trị p = 1/2, N = 3 => H = 1.375
-với giá trị p = 1/2, N = 9 => H = 1.978515625
-'''
+stepP = 0.01
+x = []
+y = []
+for i in range(1, 100):
+    p = i * stepP
+    x.append(p)
+    y.append(approxEntropy(100, p))
+
+print(x, y)
+plt.plot(x, y)
 # if __name__ == "__main__":
-#     print(approxEntropy(5, 0.5))
+#     print(approxEntropy(100, 0.5))
 #     print(approxEntropy(10, 0.5))
 #     print(approxEntropy(3, 0.5))
 #     print(approxEntropy(9, 0.5))

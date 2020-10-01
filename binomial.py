@@ -1,4 +1,5 @@
 import math
+import matplotlib.pyplot as plt
 
 
 def calculateFactorial(n, acc=1):
@@ -37,8 +38,16 @@ def approxEntropy(n, p, N):
     return sum
 
 
-'''
-'''
+stepP = 0.1
+x = []
+y = []
+for i in range(1, 100):
+    p = i * stepP
+    x.append(p)
+    y.append(approxEntropy(100, p, 100))
+
+print(x, y)
+plt.plot(x, y)
 # if __name__ == "__main__":
 #     _n = 7
 #     _p = 0.5
